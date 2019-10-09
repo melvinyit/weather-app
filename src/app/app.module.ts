@@ -12,11 +12,18 @@ import { environment } from '../environments/environment';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from './material.modules';
 import { AddCityDialog } from './app.component';
+import { WeatherComponent } from './components/weather/weather.component';
+import { CityComponent } from './components/city/city.component';
+import { AppRoutingModule } from './app-routing.module';
+import { TessComponent } from './components/tess/tess.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddCityDialog
+    AddCityDialog,
+    WeatherComponent,
+    CityComponent,
+    TessComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +32,8 @@ import { AddCityDialog } from './app.component';
     BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    AppRoutingModule
   ],
   providers: [ WeatherService ],
   bootstrap: [AppComponent],
