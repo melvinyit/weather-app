@@ -19,3 +19,31 @@ export let  imgMapBasedCity = [
     {city: 'Beijing', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Beijing_in_China_%28%2Ball_claims_hatched%29.svg/1200px-Beijing_in_China_%28%2Ball_claims_hatched%29.svg.png'},
     {city: 'New Delhi', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Location_map_India_Delhi_EN.svg/1200px-Location_map_India_Delhi_EN.svg.png'}
   ]
+
+  export class Country {
+    public countryName:string;
+    public city:string;
+
+    constructor(countryName,city){
+      this.countryName=countryName;
+      this.city=city;
+    };
+    addCountry(countryName,city){
+      this.countryName=countryName;
+      this.city=city;
+    };
+  }
+
+  export class ImageMap {
+    public city:string;
+    public imageUrl:string;
+
+    constructor(city,imageUrl){
+      this.city=city;
+      this.imageUrl=imageUrl;
+    };
+    addImageUrl(city,imageUrl){
+      this.city=city;
+      this.imageUrl=imageUrl;
+    };
+  }

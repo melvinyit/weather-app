@@ -4,6 +4,7 @@ import { Weather } from './models/weather';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { City } from './models/city';
 import { Router } from '@angular/router';
+import { Country } from './models/constants';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+
+  public countries : Country[] = [];
+
+  constructor(private weatherSvc: WeatherService, private router:Router,
+    public dialog: MatDialog){}
+
+  ngOnInit(){
+    //this.getWeatherFromAPI(this.model.cityName);
+    //this.countries.push(new Country('China','Beijing'));
+    //this.countries.push(new Country('India','New Delhi'));
+    //this.countries.push(new Country('Malaysia','Kuala Lumpur'));
+    //this.countries.push(new Country('Singapore','Singapore'));
+    console.log("country app component",this.countries);
+  }
+  addCityUsingRoute(){
+    this.router.navigate(['add']);
+  }
+  /*
   title = 'weather-app';
   WEATHER_API_KEY = "476e23fe1116f4e69d2a3e68672604e1";
   model = new Weather("Singapore",0,0,0,"", 0,0);
@@ -32,13 +51,8 @@ export class AppComponent implements OnInit{
     {city: 'Beijing', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Beijing_in_China_%28%2Ball_claims_hatched%29.svg/1200px-Beijing_in_China_%28%2Ball_claims_hatched%29.svg.png'},
     {city: 'New Delhi', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Location_map_India_Delhi_EN.svg/1200px-Location_map_India_Delhi_EN.svg.png'}
   ]
-  constructor(private weatherSvc: WeatherService, private router:Router,
-    public dialog: MatDialog){}
-
-  ngOnInit(){
-    this.getWeatherFromAPI(this.model.cityName);
-  }
-
+  */
+  /*
   getWeatherFromAPI(city: string){
     Object.keys(this.imgMapBasedCity).find(value=>{
       if(this.imgMapBasedCity[value].city === city){
@@ -70,12 +84,11 @@ export class AppComponent implements OnInit{
       }
     });
   }
+  */
 
-  addCityUsingRoute(){
-    this.router.navigate(['add']);
-  }
+  
 }
-
+/*
 @Component({
   selector: 'add-city',
   templateUrl: 'addcity.html',
@@ -89,6 +102,7 @@ export class AddCityDialog {
   onNoClick(): void {
     this.dialogRef.close();
   }
-
+  
 }
+*/
 

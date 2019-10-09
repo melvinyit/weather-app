@@ -22,9 +22,11 @@ export class AddCityComponent implements OnInit {
 
   addCityToModel(){
     console.log("add city value");
-    console.log("city",this.data.city);
-    console.log("country",this.data.country);
-    console.log("image",this.data.imageurl);
+    //console.log("city",this.data.city);
+    //console.log("country",this.data.country);
+    //console.log("image",this.data.imageurl);
+
+    this.router.navigate(['main'],{queryParams:{city:this.data.city,country:this.data.country}});
   }
 
   back(){

@@ -7,6 +7,7 @@ import { WeatherComponent } from './components/weather.component';
 
 const routes: Routes = [
   {path:'',component:MainComponent},
+  {path:'main',component:MainComponent},
   {path:'add',component:AddCityComponent},
   {path:'weather/:cityName',component:WeatherComponent},
   {path:'**',redirectTo:'/',pathMatch:'full'}

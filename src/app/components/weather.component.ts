@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Weather } from '../models/weather';
 import { WeatherService } from '../services/weather.service';
+import {constants, Country} from '../models/constants';
 
 @Component({
   selector: 'app-weather',
@@ -10,19 +11,23 @@ import { WeatherService } from '../services/weather.service';
 })
 export class WeatherComponent implements OnInit {
 
-  WEATHER_API_KEY = "476e23fe1116f4e69d2a3e68672604e1";
+  WEATHER_API_KEY = constants.WEATHER_API_KEY;
+  imageUrl =  constants.imageUrl;
+
   model = new Weather("Singapore",0,0,0,"", 0,0);
-  imageUrl = "https://www.nea.gov.sg/assets/images/map/base-853.png";
   city: string;
   country: string;
   imageurl: string;
 
+  countries : Country[] = [];
+  /*
   countries = [
     {countryName: 'China', city: 'Beijing'},
     {countryName: 'India', city: 'New Delhi'},
     {countryName: 'Malaysia', city: 'Kuala Lumpur'},
     {countryName: 'Singapore', city: 'Singapore'}
   ]
+  */
 
   imgMapBasedCity = [
     {city: 'Singapore', imageUrl: 'https://www.nea.gov.sg/assets/images/map/base-853.png'},
@@ -36,6 +41,12 @@ export class WeatherComponent implements OnInit {
   ngOnInit() {
     const city = this.actRoute.snapshot.params.cityName;
     console.log("city name",city);
+    
+    this.countries.push(new Country('China','Beijing'));
+    this.countries.push(new Country('India','New Delhi'));
+    this.countries.push(new Country('Malaysia','Kuala Lumpur'));
+    this.countries.push(new Country('Singapore','Singapore'));
+    console.log("country main component",this.countries);
     //this.getWeatherFromAPI(city);
     //subscribe way
     this.actRoute.params.subscribe(routeParams => {
