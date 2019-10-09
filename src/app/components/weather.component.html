@@ -1,21 +1,10 @@
-<mat-toolbar color="primary">
-    <span> &nbsp; </span> 
-    <span noWrap=false> Weather App </span>
-    <span class="example-spacer"></span>
-    <span> &nbsp;</span>
-    <button mat-icon-button (click)="addCityUsingRoute()">
-        <mat-icon aria-label="add City icon">add</mat-icon>
-    </button>
-</mat-toolbar>
-<router-outlet></router-outlet>
-<!--
 <mat-card class="example-card">
     <img mat-card-image [src]="imageUrl" alt="Photo of Weather">
     <mat-card-content>
       <p>
           <mat-form-field>
               <mat-label>Countries</mat-label>
-              <select matNativeControl placeholder="City" [(ngModel)]="model.cityName" name="city" (change)="fetchWeatherByCity($event)"
+              <select matNativeControl placeholder="City" [(ngModel)]="model.cityName" name="city" (change)="fetchWeatherByCityUsingRoute($event)"
               #city="ngModel">
               <option *ngFor="let country of countries"
               [value]="country.city">
@@ -41,4 +30,3 @@
       </p>
     </mat-card-content>
 </mat-card>
--->

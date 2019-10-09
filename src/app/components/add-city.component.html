@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Add City</h1>
+<div>
+  <mat-form-field>
+    <input matInput placeholder="City" [(ngModel)]="data.city">
+  </mat-form-field><br/>
+  <mat-form-field>
+    <input matInput placeholder="Country" [(ngModel)]="data.country">
+  </mat-form-field><br/>
+  <mat-form-field>
+    <input matInput placeholder="Image Url" [(ngModel)]="data.imageurl">
+  </mat-form-field>
+</div>
+<div>
+  <button mat-button color="primary" style="width : 15em;" 
+  (click)="addCityToModel()">Add</button>
+
+  <button mat-button color="warn" style="width : 15em;" 
+  (click)="back()">Back</button>
+</div>

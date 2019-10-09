@@ -1,17 +1,15 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { WeatherService } from './services/weather.service';
-import { Weather } from './models/weather';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { City } from './models/city';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { WeatherService } from '../services/weather.service';
+import { Weather } from '../models/weather';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.css']
 })
-export class AppComponent implements OnInit{
-  title = 'weather-app';
+export class MainComponent implements OnInit {
+
   WEATHER_API_KEY = "476e23fe1116f4e69d2a3e68672604e1";
   model = new Weather("Singapore",0,0,0,"", 0,0);
   imageUrl = "https://www.nea.gov.sg/assets/images/map/base-853.png";
@@ -32,8 +30,7 @@ export class AppComponent implements OnInit{
     {city: 'Beijing', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Beijing_in_China_%28%2Ball_claims_hatched%29.svg/1200px-Beijing_in_China_%28%2Ball_claims_hatched%29.svg.png'},
     {city: 'New Delhi', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Location_map_India_Delhi_EN.svg/1200px-Location_map_India_Delhi_EN.svg.png'}
   ]
-  constructor(private weatherSvc: WeatherService, private router:Router,
-    public dialog: MatDialog){}
+  constructor(private weatherSvc: WeatherService, private router: Router){}
 
   ngOnInit(){
     this.getWeatherFromAPI(this.model.cityName);
@@ -56,39 +53,9 @@ export class AppComponent implements OnInit{
     this.getWeatherFromAPI(event.target.value);
   }
 
-  addCity(): void {
-    const dialogRef = this.dialog.open(AddCityDialog, {
-      width: '250px',
-      data: {city: this.city, country: this.country, imageurl: this.imageurl}
-    });
-
-    dialogRef.afterClosed().subscribe((result) => {
-      if(typeof result !== 'undefined'){
-        this.countries.push({countryName: result.country, city: result.city });
-        this.countries.sort((a, b) => (a.countryName > b.countryName) ? 1 : -1)
-        this.imgMapBasedCity.push({city: result.city, imageUrl: result.imageurl });
-      }
-    });
-  }
-
-  addCityUsingRoute(){
-    this.router.navigate(['add']);
-  }
-}
-
-@Component({
-  selector: 'add-city',
-  templateUrl: 'addcity.html',
-})
-export class AddCityDialog {
-
-  constructor(
-    public dialogRef: MatDialogRef<AddCityDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: City) {}
-
-  onNoClick(): void {
-    this.dialogRef.close();
+  fetchWeatherByCityUsingRoute(event){
+    console.log("event value",event.target.value);
+    this.router.navigate(['weather',event.target.value]);
   }
 
 }
-
