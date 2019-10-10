@@ -1,0 +1,80 @@
+{
+  "configVersion": 1,
+  "timestamp": 1570685200814,
+  "index": "https://melvinyit.github.io/weather-app/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://melvinyit.github.io/weather-app/favicon.ico",
+        "https://melvinyit.github.io/weather-app/index.html",
+        "https://melvinyit.github.io/weather-app/main-es2015.ff578bc4cbfad7b8ac5f.js",
+        "https://melvinyit.github.io/weather-app/main-es5.9691f265547b47f49cde.js",
+        "https://melvinyit.github.io/weather-app/manifest.webmanifest",
+        "https://melvinyit.github.io/weather-app/polyfills-es2015.e8b97d86f82c10919d39.js",
+        "https://melvinyit.github.io/weather-app/polyfills-es5.8a4b38aaa820bbe58836.js",
+        "https://melvinyit.github.io/weather-app/runtime-es2015.375f12bc0081c0c12b1d.js",
+        "https://melvinyit.github.io/weather-app/runtime-es5.5f071ba442a6c083b2d7.js",
+        "https://melvinyit.github.io/weather-app/styles.f7c238ce936e7a37713f.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://melvinyit.github.io/weather-app/assets/icons/icon-128x128.png",
+        "https://melvinyit.github.io/weather-app/assets/icons/icon-144x144.png",
+        "https://melvinyit.github.io/weather-app/assets/icons/icon-152x152.png",
+        "https://melvinyit.github.io/weather-app/assets/icons/icon-192x192.png",
+        "https://melvinyit.github.io/weather-app/assets/icons/icon-384x384.png",
+        "https://melvinyit.github.io/weather-app/assets/icons/icon-512x512.png",
+        "https://melvinyit.github.io/weather-app/assets/icons/icon-72x72.png",
+        "https://melvinyit.github.io/weather-app/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://melvinyit.github.io/weather-app/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://melvinyit.github.io/weather-app/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://melvinyit.github.io/weather-app/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://melvinyit.github.io/weather-app/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://melvinyit.github.io/weather-app/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://melvinyit.github.io/weather-app/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://melvinyit.github.io/weather-app/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://melvinyit.github.io/weather-app/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://melvinyit.github.io/weather-app/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "https://melvinyit.github.io/weather-app/index.html": "be38373b984cfae21a1ab78d83619dc6ec71605e",
+    "https://melvinyit.github.io/weather-app/main-es2015.ff578bc4cbfad7b8ac5f.js": "3170b01260b159587c908b04b1a56bc789db6ea8",
+    "https://melvinyit.github.io/weather-app/main-es5.9691f265547b47f49cde.js": "a7479c92f8e9dde601aa8e1f4fb6f75159cff96f",
+    "https://melvinyit.github.io/weather-app/manifest.webmanifest": "8c58a079a6dd7ad831b1b4c3e2d23760b8c3ac16",
+    "https://melvinyit.github.io/weather-app/polyfills-es2015.e8b97d86f82c10919d39.js": "08c97940ba93ccc4121b85df6911d86011ef3fb8",
+    "https://melvinyit.github.io/weather-app/polyfills-es5.8a4b38aaa820bbe58836.js": "9d9b583788005b7e2dc51d2b965f7c09b9180c60",
+    "https://melvinyit.github.io/weather-app/runtime-es2015.375f12bc0081c0c12b1d.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "https://melvinyit.github.io/weather-app/runtime-es5.5f071ba442a6c083b2d7.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "https://melvinyit.github.io/weather-app/styles.f7c238ce936e7a37713f.css": "e44247179f7ff6c616439f6ad8e4e8acc146201a"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
