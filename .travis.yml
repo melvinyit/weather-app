@@ -15,6 +15,9 @@ before_script:
 script:
  - ng build --prod --base-href https://melvinyit.github.io/weather-app/
 
+notifications:
+  slack: csf-2019:tYjerA27KoMXFw68mBEyyULT
+
 deploy:
   provider: pages
   skip_cleanup: true
