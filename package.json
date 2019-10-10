@@ -9,7 +9,7 @@
     "test-headless": "ng test --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e",
-	"deploy": "now ./dist/ziet --no-clipboard --token=$NOW_TOKEN --public --prod",
+	"deploy": "now ./dist/ziet --no-clipboard --token=$NOW_TOKEN --public --prod"
   },
   "private": true,
   "dependencies": {
